@@ -10,7 +10,7 @@ proxyObj['/'] = {
     //websocket
     ws: false,
     //后台服务地址
-    target: 'http://localhost:8081',
+    target: 'http://localhost:8888',
     //发送请求头中host会设置成target
     changeOrigin: true,
     //不重写请求地址

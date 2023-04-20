@@ -39,9 +39,9 @@ export default {
       loading: false,
       checked: true,
       loginForm: {
-        username: '超管-Admin',
+        username: 'zhangsan',
         password: '123456',
-        code: 'yyds'
+        code: 'y1s1'
       },
       /*校验规则*/
       rules: {
@@ -70,13 +70,10 @@ export default {
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
           // this.loading = true;
-          this.postRequest('/login', this.loginForm).then(resp => {
+          this.postRequest('/user/login', this.loginForm).then(resp => {
             console.log(resp);
             if (resp.code === 0) {
               this.loading = false;
-              //存储用户token
-              // 清空菜单
-              this.$store.commit('initRoutes', [])
               //页面跳转,获取重定向的地址
               let path = this.$route.query.redirect;
               if (path === '/' || path === undefined) {
