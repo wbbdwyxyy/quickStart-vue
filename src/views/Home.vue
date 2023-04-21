@@ -70,7 +70,7 @@
         <el-table-column align="left"
                          prop="avatar_url"
                          label="头像url"
-                         width="180">
+                         width="300">
         </el-table-column>
         <el-table-column align="left"
                          prop="created_by"
